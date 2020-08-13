@@ -1,0 +1,103 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="manifest" href="manifest.json">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#1b1b32" />
+    <meta name="description" content="PM Your Social Media / Ads For Free!" />
+
+    <title>PM Your Social Media / Ads For Free!</title>
+
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://res.cloudinary.com/codelifings/image/upload/v1597208457/megaphone_osynts.png"
+      type="image/png"
+    />
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/client.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>
+        🌞 Hello, Netizen..
+      </h1>
+    </header>
+
+    <main>
+      <p class="bold">PM Your Social Media or Ads For Free!</p>
+      <br />
+      <p>Tell us what you would like to offer to be followed, or visited, or anything for Ads from
+          your stuff<p>
+      <a href="#support"
+        ><button>
+          support me here 😆
+        </button></a
+      >
+      <a href="https://nisacodelifings.netlify.com"
+        ><button>
+          contact &#128204;
+        </button></a
+      >
+      
+      <br><br><br>
+      <form>
+        <input
+          name="dream"
+          aria-label="a new dream"
+          type="text"
+          maxlength="100"
+        />
+        <button type="submit" id="submit-dream">Promote!</button>
+      </form>
+
+      <section class="dreams">
+        <ul id="dreams"></ul>
+      </section>
+    </main>
+    
+    <br><br>
+    <footer id="support">
+       <h1>
+        🎉 Let's support!
+      </h1>
+      <p class="bold">I'm nisacodelifings, and I Build Products!</p><br>
+      <a href="https://paypal.me/nisacode"><button>
+         Paypal.me 👍
+      </button></a>
+      
+      <a href="https://saweria.co/nisacodelifings" class="jarak-pinggirkiri"><button>
+         Saweria.co 👍
+      </button></a>
+    </footer>
+    
+    
+    <script>
+    
+    // ServiceWorker Registration
+    if('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('../sw.js').then(function(registration) {
+                // Registration was successful
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                
+            }, function(err) {
+                // registration failed :(
+                console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+    }
+    
+    
+    </script>
+    
+  </body>
+</html>
